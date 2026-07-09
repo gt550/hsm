@@ -1,0 +1,14 @@
+.env
+*.log
+
+logs/*
+!logs/.gitkeep
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+vendor/
+node_modules/
