@@ -10,11 +10,10 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-/**
- * Test shortcode.
- *
- * Usage: [hsm_custom_test]
- */
-add_shortcode('hsm_custom_test', function () {
-    return '<div>HSM Custom Plugin is active.</div>';
-});
+define('HSM_CUSTOM_VERSION', '1.0.0');
+define('HSM_CUSTOM_PATH', plugin_dir_path(__FILE__));
+define('HSM_CUSTOM_URL', plugin_dir_url(__FILE__));
+
+require_once HSM_CUSTOM_PATH . 'includes/class-hsm-loader.php';
+
+HSM_Loader::init();
